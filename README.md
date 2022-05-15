@@ -1,2 +1,2 @@
 # jspractice
-JS mini projects compilation
+JS mini projects - interactive rating components
