@@ -1,43 +1,81 @@
 body { background-color: hsl(216, 12%, 8%);}
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-    .hidden { display: none; }
-    h2 { color: white; }
-    p { color: hsl(217, 12%, 63%); }
-    .rating_box { 
-        position: relative;
-        top: 15vh;
-        width: 360px;
-        background-color: hsl(213, 19%, 18%);
-        color: hsl(217, 12%, 63%);
-        margin: auto;
-        padding: 30px;
-        border-radius: 20px;
-        font-family: 'Overpass', sans-serif;
-    }
-    
-    .star_icon svg { background-color: hsl(214, 11%, 25%); padding: 20px; border-radius: 50%;}
-    .wrapper ul {
-        justify-content: space-between;
-        padding: 0%;
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+.hidden { display: none; }
+h2 { color: white; }
+p { color: hsl(217, 12%, 63%); }
+.rating_box, .thank_box { 
+    position: relative;
+    top: 15vh;
+    width: 360px;
+    background-color: hsl(213, 19%, 18%);
+    color: hsl(217, 12%, 63%);
+    margin: auto;
+    padding: 30px;
+    border-radius: 20px;
+    font-family: 'Overpass', sans-serif;
+}
+.thank_box {
+    text-align: center;
+}
+.star_icon svg { background-color: hsl(214, 11%, 25%); padding: 20px; border-radius: 50%;}
+.wrapper ul {
+    display: flex;
+    padding-left: 0;
+    margin-top: 7vh;
+    margin-bottom: 7vh;
 
+
+}
+.num_icon {
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    width: 46px;
+    height: 46px;
+    line-height: 46px;
+    margin-left: auto;
+    margin-right: auto;
+    list-style-type: none;
+    background-color: hsl(214, 11%, 25%);
+    color: hsl(217, 12%, 63%);
+    border-radius: 50%;
+
+}
+@media screen and (max-width: 415px) {
+    .rating_box, .thank_box {
+    position: relative;
+    top: 20vh;
+    width: 70%;
+    aspect-ratio: 1.4;
+    background-color: hsl(213, 19%, 18%);
+    color: hsl(217, 12%, 63%);
+    margin: auto;
+    padding: 30px;
+    border-radius: 20px;
+    font-family: 'Overpass', sans-serif;
+    font-size: 0.8em;
     }
+}
+@media screen and (max-width: 415px) {
     .wrapper .num_icon {
         text-align: center;
         display: inline-flex;
-        padding: 20px 20px;
+        padding: 15px 18px;
         list-style-type: none;
         background-color: hsl(214, 11%, 25%);
         color: hsl(217, 12%, 63%);
         border-radius: 50%;
-        margin-block: 20px;
-        margin-right: 20px;
-    }
-    @media screen and (max-width: 415px) {
-        .rating_box, .thank_box {
+        margin-block: 21px;
+        margin-right: 1vw;
+}
+}
+
+/* @media screen and (max-width: 415px) {
+    .thank_box {
         position: relative;
-        top: 20vh;
-        width: 70%;
+        top: 30vh;
+        width: 60%;
         aspect-ratio: 1.4;
         background-color: hsl(213, 19%, 18%);
         color: hsl(217, 12%, 63%);
@@ -46,69 +84,34 @@ body { background-color: hsl(216, 12%, 8%);}
         border-radius: 20px;
         font-family: 'Overpass', sans-serif;
         font-size: 0.8em;
-        }
     }
-    @media screen and (max-width: 415px) {
-        .wrapper .num_icon {
-            text-align: center;
-            display: inline-flex;
-            padding: 15px 18px;
-            list-style-type: none;
-            background-color: hsl(214, 11%, 25%);
-            color: hsl(217, 12%, 63%);
-            border-radius: 50%;
-            margin-block: 21px;
-            margin-right: 1vw;
-    }
-    }
+} */
+.num_icon:hover {
+    background-color: hsl(25, 97%, 53%);
+    color: white;
+}
+.wrapper .num_clicked {
+    background-color: hsl(216, 12%, 54%);
+    color: white;
+}
+.submit_btn { 
+    text-align: center; background-color: hsl(25, 97%, 53%);
+    padding: 10px;
+    border-radius: 30px;
+    color: hsl(0, 0%, 100%);
+}
+.submit_btn:hover {
+    background-color: white;
+    color: hsl(25, 97%, 53%);
+}
+.hidden {
+    display: hidden;
+}
 
-    /* @media screen and (max-width: 415px) {
-        .thank_box {
-            position: relative;
-            top: 30vh;
-            width: 60%;
-            aspect-ratio: 1.4;
-            background-color: hsl(213, 19%, 18%);
-            color: hsl(217, 12%, 63%);
-            margin: auto;
-            padding: 30px;
-            border-radius: 20px;
-            font-family: 'Overpass', sans-serif;
-            font-size: 0.8em;
-        }
-    } */
-    .num_icon:hover {
-        background-color: hsl(25, 97%, 53%);
-        color: white;
-    }
-    .wrapper .num_clicked {
-        background-color: hsl(216, 12%, 54%);
-        color: white;
-    }
-    .submit_btn { 
-        text-align: center; background-color: hsl(25, 97%, 53%);
-        padding: 10px;
-        border-radius: 30px;
-        color: hsl(0, 0%, 100%);
-    }
-    .submit_btn:hover {
-        background-color: white;
-        color: hsl(25, 97%, 53%);
-    }
-    .hidden {
-        display: hidden;
-    }
-    .thank_box {
-        position: relative;
-        top: 15vh;
-        text-align: center;
-        width: 360px;
-        background-color: hsl(213, 19%, 18%);
-        color: hsl(217, 12%, 63%);
-        margin: auto;
-        padding: 30px;
-        border-radius: 20px;
-        font-family: 'Overpass', sans-serif;
-        
-    }
-    #your_rating { color: hsl(25, 97%, 53%); background-color: hsl(214, 11%, 25%); padding: 10px; border-radius: 20px;}
+#your_rating { 
+    color: hsl(25, 97%, 53%); 
+    background-color: hsl(214, 11%, 25%); 
+    padding: 10px; 
+    border-radius: 20px;
+    margin: 7vh 0 7vh 0;
+}
